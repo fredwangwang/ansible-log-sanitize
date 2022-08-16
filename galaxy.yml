@@ -1,6 +1,6 @@
 namespace: fredwangwang
 name: log_sanitize
-version: 1.0.0
+version: 1.0.1
 
 readme: README.md
 
@@ -24,7 +24,6 @@ dependencies: {}
 
 build_ignore:
 - tests
-- pics
 - demo.yml
 - ansible.cfg
 
