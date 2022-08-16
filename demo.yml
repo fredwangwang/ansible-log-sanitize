@@ -1,0 +1,12 @@
+- name: Leak my password!?!?
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - ansible.builtin.debug:
+      msg: |
+        oh no my password: WhosYourDaddy leaked :(
+  - fredwangwang.log_sanitize.sanitize_ctl:
+      add: ['WhosYourDaddy']
+  -  ansible.builtin.debug:
+      msg: |
+        annd no more leaking passwords: WhosYourDaddy ;)
