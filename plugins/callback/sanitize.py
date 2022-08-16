@@ -2,7 +2,6 @@
 
 from __future__ import (absolute_import, division, print_function)
 import os
-
 from ansible.plugins.loader import callback_loader
 from ansible.utils.color import colorize, hostcolor
 from ansible.plugins.callback import CallbackBase
@@ -42,10 +41,9 @@ DOCUMENTATION = '''
 
 authkey = os.urandom(20)
 if os.name == 'nt':
-    address = r'\.\pipesanitizewordsmgr'
+    address = r'\.\pipesanitizewordsmgr' + os.urandom(5).hex()
 else:
-    address = '/tmp/sanitizewordsmgr.sock'
-
+    address = '/tmp/sanitizewordsmgr' + os.urandom(5).hex()
 
 class Words:
     '''
